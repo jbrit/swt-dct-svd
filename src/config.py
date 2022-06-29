@@ -1,3 +1,4 @@
+is_encrypt_watermark = True
 # Set this to true if there is no encryption key
 generate_enc_key = False
 
@@ -14,7 +15,7 @@ embedded_images_path = "../assets/embedded_images/"
 extracted_images_path = "../assets/extracted_images/"
 
 # specify the dct block size
-dct_block_size = (8, 8)
+dct_block_size = (1, 1)
 
 # specify the alpha parameter
 # embedding strength, in the paper it is given as [1 - 2]

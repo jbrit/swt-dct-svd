@@ -87,8 +87,11 @@ def update_dct_blocks(dct_blocks, watermark_encrypted):
 
     for i, idata in enumerate(dct_blocks):
         for j, jdata in enumerate(idata):
-            current_dct_block_updated = update_dct_block(jdata, watermark_encrypted[i][j]) # get updated dct current block
-            updated_dct_blocks[i][j] = current_dct_block_updated # store the updated dct block
+            try:
+                current_dct_block_updated = update_dct_block(jdata, watermark_encrypted[i][j]) # get updated dct current block
+                updated_dct_blocks[i][j] = current_dct_block_updated # store the updated dct block
+            except:
+                return updated_dct_blocks
             
     return updated_dct_blocks
 
